@@ -1,0 +1,295 @@
+# Hexo Configuration
+## Docs: https://hexo.io/docs/configuration.html
+## Source: https://github.com/hexojs/hexo/
+
+# Site
+title: 大涛子峡谷
+subtitle: 简单、极致、不失风趣
+description: 一枚小小的前端攻城狮、迷恋摄影
+favicon: /img/favicon-y.ico
+keywords: 
+author: 大涛子
+language: zh-CN
+timezone:
+
+# URL
+## If your site is put in a subdirectory, set url as 'http://yoursite.com/child' and root as '/child/'
+url: https://istaotao.com
+root: /
+permalink: :year/:month/:day/:title/
+permalink_defaults: 
+
+# Directory
+source_dir: source
+public_dir: public
+tag_dir: tags
+archive_dir: archives
+category_dir: categories
+code_dir: downloads/code
+i18n_dir: :lang
+skip_render:
+
+# Writing
+new_post_name: :title.md # File name of new posts
+default_layout: post
+titlecase: false # Transform title into titlecase
+external_link: true # Open external links in new tab
+filename_case: 0
+render_drafts: false
+post_asset_folder: false
+relative_link: false
+future: true
+highlight:
+  enable: true
+  line_number: true
+  auto_detect: false
+  tab_replace:
+  
+# Home page setting
+# path: Root path for your blogs index page. (default = '')
+# per_page: Posts displayed per page. (0 = disable pagination)
+# order_by: Posts order. (Order by date descending by default)
+index_generator:
+  path: ''
+  per_page: 20
+  order_by: -date
+  
+# Category & Tag
+default_category: uncategorized
+category_map:
+tag_map:
+
+# Date / Time format
+## Hexo uses Moment.js to parse and display date
+## You can customize the date format as defined in
+## http://momentjs.com/docs/#/displaying/format/
+date_format: YYYY-MM-DD
+time_format: HH:mm:ss
+
+# Pagination
+## Set per_page to 0 to disable pagination
+per_page: 8
+pagination_dir: page
+
+# Extensions
+## Plugins: https://hexo.io/plugins/
+## Themes: https://hexo.io/themes/
+theme: material-x
+
+# Deployment
+## Docs: https://hexo.io/docs/deployment.html
+deploy:
+  type: git
+  repo: git@github.com:yangtao2o/yangtao2o.github.io.git
+  branch: master
+  
+# Highlight Plugin
+prism_plugin:
+  mode: 'realtime'    # realtime/preprocess
+  theme: 'base16-ateliersulphurpool.light'    # hopscotch/pojoaque/tomorrow/solarizedlight/xonokai/duotone-dark/duotone-light/
+    # default
+    # coy
+    # dark
+    # funky
+    # okaidia
+    # twilight
+    # base16-ateliersulphurpool.light
+    # cb
+    # duotone-earth
+    # duotone-forest
+    # duotone-sea
+    # duotone-space
+    # ghcolors
+  line_number: 'default'    # default false
+  custom_css: 'optional'     # optional
+
+# hexo-generator-json-content
+jsonContent:
+  meta: false
+  pages: false
+  posts:
+    title: true
+    date: true
+    path: true
+    text: false
+    raw: false
+    content: false
+    slug: false
+    updated: false
+    comments: false
+    link: false
+    permalink: false
+    excerpt: false
+    categories: true
+    tags: true
+
+# >> 主题配置 ---------------------------------------------------------------------
+# 导航栏
+nav_menu:
+  - name: 主页
+    slug: about
+    icon: fa-home
+    url: /
+  - name: 项目
+    slug: projects
+    icon: fa-cube
+    url: https://codepen.io/istaotao/
+  - name: 博客
+    slug: home
+    icon: fa-rss
+    url: /
+  - name: 归档
+    slug: archives
+    icon: fa-archive
+    url: /archives
+  - name: 收藏夹
+    slug: favorite
+    icon: fa-address-book
+    url: http://collect.w3ctrain.com/
+  - name: 工具
+    slug: tool
+    icon: fa-wrench
+    url: https://tool.lu/c/developer
+  - name: 分享
+    slug: juejin
+    icon: fa-share-alt-square 
+    url: https://juejin.im/user/58b67dd58fd9c50061238e38/shares
+  - name: 摄影
+    slug: photo
+    icon: fa-camera-retro
+    url: https://tuchong.com/2763959/
+  - name: 简书
+    slug: book
+    icon: fa-book
+    url: https://www.jianshu.com/u/c6b5715f3016
+# 右边的小窗口，不想显示哪一项的注释掉对应的即可
+widgets:
+  # 博主信息，显示个人头像、格言、社交信息等
+  author:
+    enable: true
+    avatar: /img/me-lg.jpg # 头像，如果config中已经设置avatar了，这里可以不用写
+    title: 大涛子 # 博客名、头衔等等，居中显示
+    motto: 就像风走了八千里，不问归期 # 格言座右铭等等
+    social: true # 是否显示社交信息（内容同页脚的社交信息）
+  # 显示文章分类
+  categories: true
+  # 显示文章标签
+  tagcloud: true
+  # 显示网易云歌单
+  musicid: 389370925 # 歌单id
+  # 显示友链
+  links:
+  - name: 大雷子
+    url: https://isliulei.com/
+  - name: 贵姥姥
+    url: https://zguii.com/
+  - name: 一者乎
+    url: https://www.qdfuns.com/u/32286.html
+  - name: xaoxuu
+    url: https://xaoxuu.com
+  - name: HcySunYang
+    url: http://hcysun.me/
+  - name: 张鑫旭
+    url: http://www.zhangxinxu.com/
+  - name: 廖雪峰的官方网站
+    url: https://www.liaoxuefeng.com/
+  - name: 阮一峰的网络日志
+    url: http://www.ruanyifeng.com/blog/
+  - name: Cherry’s blog
+    url: https://cherryblog.site/
+  - name: 草依山的Javascript世界
+    url: http://jser.me/about.html
+  - name: 冴羽的掘金
+    url: https://juejin.im/user/58e4b9b261ff4b006b3227f4/posts
+  # 显示目录（在文章中设置toc:false可以隐藏单篇文章的目录）
+  toc: true
+
+# 页脚社交信息
+social:
+  - icon: fa-envelope
+    url: mailto:yangtaobanner@foxmail.com
+  - icon: fa-github
+    url: https://github.com/yangtao2o
+  - icon: fa-instagram
+    url:
+  - icon: fa-google-plus
+    url:
+  - icon: fa-twitter
+    url:
+  - icon: fa-music
+    url: https://music.163.com/#/user/home?id=282751852
+  - icon: fa-rss
+    url: 
+  - icon: fa-telegram
+    url:
+  - icon: fa-vimeo
+    url:
+  - icon: fa-gitlab
+    url:
+  - icon: fa-linkedin
+    url: http://www.linkedin.com/in/%E6%B6%9B-%E6%9D%A8-06a70212b/
+  - icon: fa-snapchat
+    url:
+  - icon: fa-steam
+    url:
+  - icon: fa-spotify
+    url:
+  - icon: fa-tumblr
+    url:
+  - icon: fa-youtube
+    url:
+  - icon: fa-weibo
+    url: http://weibo.com/taoboy0208
+  - icon: fa-weixin
+    url: /img/wx.png
+  - icon: fa-qq
+    url:
+
+
+# 推荐文章
+recommended_posts:
+  autoDisplay: false # 自动在文章底部显示推荐文章，如果你使用Material-X主题，这里要设置为false。
+  server: https://api.truelaurel.com # 后端推荐服务器地址
+  timeoutInMillis: 10000 # 服务时长，超过此时长，则使用离线推荐模式
+  excludePattern: []
+  titleHtml: <h4>推荐文章</h4> #自定义标题
+  internalLinks: 3 # 内部文章数量
+  externalLinks: 2 # 外部文章数量
+  fixedNumber: false
+
+
+# Search 确保_config中只有一个search，否则会冲突。
+search:
+  enable: true
+  service: hexo
+  # google
+  google_api_key:
+  google_engine_id:
+  # algolia
+  algolia_app_id:
+  algolia_api_key:
+  algolia_index_name:
+  # azure
+  azure_service_name:
+  azure_index_name:
+  azure_query_key:
+  # baidu
+  baidu_api_id:
+
+# Less
+less:
+  compress: true
+
+# valine 
+valine:
+  enable: true # 如果你想用Valine评论系统，请设置enable为true
+  appId: BXbRzdRWKuKAzooJu0Gin1mO-gzGzoHsz
+  appKey: WEzG2CMtkcbmqrmqMkgIGIRL
+  guest_info: nick,mail,link #valine comment header info
+  placeholder: 你不想说些什么麽~ # valine comment input placeholder(like: Please leave your footprints )
+  avatar: monsterid # gravatar style https://valine.js.org/avatar
+  pageSize: 10 # comment list page size
+  verify: false # valine verify code (true/false)
+  notify: false # valine mail notify (true/false)
+  lang: zh-cn
+# >> 主题配置 ---------------------------------------------------------------------
