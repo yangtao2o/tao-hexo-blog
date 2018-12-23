@@ -12,10 +12,10 @@ categories:
 #### 一、目录基本操作
 ##### 1. `pwd` --- 获取当前所在路径
 ```bash
+
 yangtaodeMacBook-Pro:test yangtao$ pwd
 /Users/yangtao/Desktop/文件创建/test
 ```
-
 <!--more-->
 ##### 2. `ls` --- 列出当前目录下的所有文件
 * `ls -l` --- 用长格式列出来
@@ -46,7 +46,6 @@ yangtaodeMacBook-Pro:test yangtao$ pwd
 ##### 10. `touch` --- 创建文件
 
 ##### 11. `cat` --- 查看文件内容 
-
 #### 二、历史操作
 ##### 1. `向上（向下）箭头`
 查看上一个（下一个）命令，可以一直向前查看之前执行过的命令
@@ -58,6 +57,7 @@ yangtaodeMacBook-Pro:test yangtao$ pwd
 #### 三、进程管理操作
 ##### 1. `ps` --- 查看当前终端运行的程序
 ```bash
+
 yangtaodeMacBook-Pro:test yangtao$ ps
   PID TTY           TIME CMD
 19083 ttys000    0:00.40 -bash
@@ -65,6 +65,7 @@ yangtaodeMacBook-Pro:test yangtao$ ps
 
 ##### 2. `ps ax` ---列出这台电脑正在运行的所有程序
 ```bash
+
 20008   ??  S      0:00.12 /System/Library/Frameworks/QuickLook.framework/Resources/quicklookd.app/Contents/MacOS/quicklookd
 19082 s000  Ss     0:00.02 login -pf yangtao
 19083 s000  S      0:00.40 -bash
@@ -74,6 +75,7 @@ yangtaodeMacBook-Pro:test yangtao$
 
 ##### 3. `top` --- 显示这台计算机上有哪些进程，显示内存、CPU、负载等
 ```bash
+
 PID    COMMAND      %CPU TIME     #TH   #WQ  #PORT MEM    PURG   CMPRS  PGRP  PPID  STATE    BOOSTS           %CPU_ME %CPU_OTHRS UID  FAULTS    COW
 20088  top          4.1  00:00.99 1/1   0    23    6724K  0B     0B     20088 19083 running  *0[1]            0.00000 0.00000    0    7185+     105
 20087  AGSService   0.0  00:00.03 2     1    36    1716K  0B     0B     20087 1     sleeping *0[1]            0.00000 0.00000    0    3076      
@@ -91,6 +93,7 @@ __Tips：__ 如果遇到无法杀掉的进程，输入命令`sudo kill -9 [PID]`
 ##### 4. `ls /usr/bin | grep ls` --- 查看/usr/bin目录下面带ls的目录
 ##### 5. `ls /usr/bin | grep ls | wc` --- 计算出单词的数量
 ```bash
+
 yangtaodeMacBook-Pro:test yangtao$ ls /usr/bin | grep ls | wc
       16      16     124
 # 16行 16个单词 124个字符
@@ -99,6 +102,7 @@ yangtaodeMacBook-Pro:test yangtao$ ls /usr/bin | grep ls | wc
 #### 五、环境变量操作
 ##### 1. `set | grep PATH` --- 查看环境变量
 ```bash
+
 yangtaodeMacBook-Pro:~ yangtao$ set | grep PATH
 PATH=/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin
 
@@ -121,6 +125,7 @@ PATH=/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin
 我的连的是en5，它的状态时active（最后一行），原文是en4
 
 ```bash
+
 en5: flags=8863<UP,BROADCAST,SMART,RUNNING,SIMPLEX,MULTICAST> mtu 1500
 	ether ac:de:48:00:11:22 
 	inet6 fe80::aede:48ff:fe00:1122%en5 prefixlen 64 scopeid 0x7 

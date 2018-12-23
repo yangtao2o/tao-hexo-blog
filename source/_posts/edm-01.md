@@ -102,13 +102,36 @@ categories:
 * 内敛元素的`padding`无效、`vertical-align`不能被识别，可定义在`td`
 * 别想着继承的事儿，某一块的样式都单独设置，比如链接样式，文字样式等
 * `p`标签的`width`不起作用，可定义在`td`
+* `p`标签的字体颜色会被覆盖，可单独使用诸如`span`等重新设置字体颜色，或者使用`style`定义在td
 * 当设置 `<img align="left" />` 或 `<img align="right" />`时，图片会脱离文档流，在其父元素设置了 `margin` 或 `padding` 的话，都无法使其下移，左移或右移
+* `line-height`默认为`1.6`
+* `#FFFFFF`关于颜色值，使用六位并且大写，使用简写在outlook下被忽略（很神奇）
+* 关于链接，可以单独设置：
+```css
+<style>
+    a:link,
+    a:visited {
+      color: white;
+      text-decoration: none;
+    }
 
+    a:hover,
+    a:active {
+      text-decoration: none;
+      color: white;
+    }
+
+    a:focus {
+      text-decoration: none;
+      color: white;
+    }
+  </style>
+```
 ##### Tips
 * 避免使用`margin padding`等属性，定义宽高的属性放在`td`，定义样式放在`p`或者`span`等标签内
 * 一般而言，指定表格单元格宽度要比指定表格自身宽度要好 
 * 使用bgcolor来替找style="background:",在电子邮件客户端中HTML属性要比CSS样式更好，但是优先等级依旧是：css样式>html属性
-
+* 新浪邮箱会忽略掉`cellpadding`，一般设置为` 0 `
 ### 三、悟道
 #### 邮件设计
 * 电子邮件的设计过程是非常纠结的，为了美还得考虑制作过程的煎熬

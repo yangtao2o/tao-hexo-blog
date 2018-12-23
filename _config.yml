@@ -3,11 +3,12 @@
 ## Source: https://github.com/hexojs/hexo/
 
 # Site
-title: 大涛子峡谷
+title: yangtao's blog
 subtitle: 简单、极致、不失风趣
 description: 一枚小小的前端攻城狮、迷恋摄影
 favicon: /img/favicon-y.ico
-keywords: 
+shortcut_icon: /img/favicon-y.ico
+keywords: 大涛子 前端 web 摄影
 author: 大涛子
 language: zh-CN
 timezone:
@@ -124,161 +125,119 @@ jsonContent:
     tags: true
 
 # >> 主题配置 ---------------------------------------------------------------------
-# 导航栏
+# 支持google字体 在这里选好你需要的字体：https://fonts.google.com，然后在_defines.less中修改font_family。
+google_fonts: 'Skranji|Ubuntu' # 多个字体中间用英文竖线隔开
+
+# 博主信息的写法示例
+avatar: /img/me-lg.jpg
+motto: 就像风走了八千里，不问归期
+
+
+# 导航栏，url必须以 "/" 结尾
 nav_menu:
   - name: 主页
     slug: about
-    icon: fa-home
+    icon: fas fa-home
     url: /
   - name: 项目
     slug: projects
-    icon: fa-cube
+    icon: fas fa-cube
     url: https://codepen.io/istaotao/
   - name: 博客
     slug: home
-    icon: fa-rss
+    icon: fas fa-rss
     url: /
   - name: 归档
     slug: archives
-    icon: fa-archive
-    url: /archives
+    icon: fas fa-archive
+    url: /archives/
   - name: 收藏夹
     slug: favorite
-    icon: fa-address-book
+    icon: fas fa-address-book
     url: http://collect.w3ctrain.com/
   - name: 工具
     slug: tool
-    icon: fa-wrench
-    url: https://tool.lu/c/developer
+    icon: fas fa-wrench
+    url: https://tool.lu/c/developer/
   - name: 分享
     slug: juejin
-    icon: fa-share-alt-square 
-    url: https://juejin.im/user/58b67dd58fd9c50061238e38/shares
+    icon: fas fa-share-alt-square 
+    url: https://juejin.im/user/58b67dd58fd9c50061238e38/shares/
   - name: 摄影
     slug: photo
-    icon: fa-camera-retro
+    icon: fas fa-camera-retro
     url: https://tuchong.com/2763959/
   - name: 简书
     slug: book
-    icon: fa-book
-    url: https://www.jianshu.com/u/c6b5715f3016
-# 右边的小窗口，不想显示哪一项的注释掉对应的即可
-widgets:
-  # 博主信息，显示个人头像、格言、社交信息等
-  author:
-    enable: true
-    avatar: /img/me-lg.jpg # 头像，如果config中已经设置avatar了，这里可以不用写
-    title: 大涛子 # 博客名、头衔等等，居中显示
-    motto: 就像风走了八千里，不问归期 # 格言座右铭等等
-    social: true # 是否显示社交信息（内容同页脚的社交信息）
-  # 显示文章分类
-  categories: true
-  # 显示文章标签
-  tagcloud: true
-  # 显示网易云歌单
-  musicid: 389370925 # 歌单id
-  # 显示友链
-  links:
-  - name: 大雷子
-    url: https://isliulei.com/
-  - name: 贵姥姥
-    url: https://zguii.com/
-  - name: 一者乎
-    url: https://www.qdfuns.com/u/32286.html
-  - name: xaoxuu
-    url: https://xaoxuu.com
-  - name: HcySunYang
-    url: http://hcysun.me/
-  - name: 张鑫旭
-    url: http://www.zhangxinxu.com/
-  - name: 廖雪峰的官方网站
-    url: https://www.liaoxuefeng.com/
-  - name: 阮一峰的网络日志
-    url: http://www.ruanyifeng.com/blog/
-  - name: Cherry’s blog
-    url: https://cherryblog.site/
-  - name: 草依山的Javascript世界
-    url: http://jser.me/about.html
-  - name: 冴羽的掘金
-    url: https://juejin.im/user/58e4b9b261ff4b006b3227f4/posts
-  # 显示目录（在文章中设置toc:false可以隐藏单篇文章的目录）
-  toc: true
+    icon: fas fa-book
+    url: https://www.jianshu.com/u/c6b5715f3016/
+
+# 显示友链
+links:
+- name: 大雷子
+  url: https://isliulei.com/
+- name: 贵姥姥
+  url: https://zguii.com/
+- name: 一者乎
+  url: https://www.qdfuns.com/u/32286.html
+- name: xaoxuu
+  url: https://xaoxuu.com
+- name: HcySunYang
+  url: http://hcysun.me/
+- name: 张鑫旭
+  url: http://www.zhangxinxu.com/
+- name: 廖雪峰的官方网站
+  url: https://www.liaoxuefeng.com/
+- name: 阮一峰的网络日志
+  url: http://www.ruanyifeng.com/blog/
+- name: Cherry’s blog
+  url: https://cherryblog.site/
+- name: 草依山的Javascript世界
+  url: http://jser.me/about.html
+- name: 冴羽的掘金
+  url: https://juejin.im/user/58e4b9b261ff4b006b3227f4/posts
+
 
 # 页脚社交信息
 social:
-  - icon: fa-envelope
-    url: mailto:yangtaobanner@foxmail.com
-  - icon: fa-github
-    url: https://github.com/yangtao2o
-  - icon: fa-instagram
-    url:
-  - icon: fa-google-plus
-    url:
-  - icon: fa-twitter
-    url:
-  - icon: fa-music
-    url: https://music.163.com/#/user/home?id=282751852
-  - icon: fa-rss
-    url: 
-  - icon: fa-telegram
-    url:
-  - icon: fa-vimeo
-    url:
-  - icon: fa-gitlab
-    url:
-  - icon: fa-linkedin
-    url: http://www.linkedin.com/in/%E6%B6%9B-%E6%9D%A8-06a70212b/
-  - icon: fa-snapchat
-    url:
-  - icon: fa-steam
-    url:
-  - icon: fa-spotify
-    url:
-  - icon: fa-tumblr
-    url:
-  - icon: fa-youtube
-    url:
-  - icon: fa-weibo
-    url: http://weibo.com/taoboy0208
-  - icon: fa-weixin
+  - icon: fab fa-weixin
     url: /img/wx.png
-  - icon: fa-qq
+  - icon: fas fa-envelope
+    url: mailto:yangtaobanner@foxmail.com
+  - icon: fab fa-github
+    url: https://github.com/yangtao2o
+  - icon: fas fa-instagram
     url:
-
-
-# 推荐文章
-recommended_posts:
-  autoDisplay: false # 自动在文章底部显示推荐文章，如果你使用Material-X主题，这里要设置为false。
-  server: https://api.truelaurel.com # 后端推荐服务器地址
-  timeoutInMillis: 10000 # 服务时长，超过此时长，则使用离线推荐模式
-  excludePattern: []
-  titleHtml: <h4>推荐文章</h4> #自定义标题
-  internalLinks: 3 # 内部文章数量
-  externalLinks: 2 # 外部文章数量
-  fixedNumber: false
-
-
-# Search 确保_config中只有一个search，否则会冲突。
-search:
-  enable: true
-  service: hexo
-  # google
-  google_api_key:
-  google_engine_id:
-  # algolia
-  algolia_app_id:
-  algolia_api_key:
-  algolia_index_name:
-  # azure
-  azure_service_name:
-  azure_index_name:
-  azure_query_key:
-  # baidu
-  baidu_api_id:
-
-# Less
-less:
-  compress: true
+  - icon: fas fa-google-plus
+    url:
+  - icon: fas fa-twitter
+    url:
+  - icon: fas fa-music
+    url: https://music.163.com/#/user/home?id=282751852
+  - icon: fas fa-rss
+    url: 
+  - icon: fas fa-telegram
+    url:
+  - icon: fas fa-vimeo
+    url:
+  - icon: fas fa-gitlab
+    url:
+  - icon: fab fa-linkedin
+    url: http://www.linkedin.com/in/%E6%B6%9B-%E6%9D%A8-06a70212b/
+  - icon: fas fa-snapchat
+    url:
+  - icon: fas fa-steam
+    url:
+  - icon: fas fa-spotify
+    url:
+  - icon: fas fa-tumblr
+    url:
+  - icon: fas fa-youtube
+    url:
+  - icon: fab fa-weibo
+    url: http://weibo.com/taoboy0208
+  - icon: fas fa-qq
+    url:
 
 # valine 
 valine:
@@ -292,4 +251,11 @@ valine:
   verify: false # valine verify code (true/false)
   notify: false # valine mail notify (true/false)
   lang: zh-cn
-# >> 主题配置 ---------------------------------------------------------------------
+
+# 百度统计key
+baidu_analytics_key: xxxxxxxx
+# leancloud统计
+leancloud:
+  app_id: BXbRzdRWKuKAzooJu0Gin1mO-gzGzoHsz
+  app_key: WEzG2CMtkcbmqrmqMkgIGIRL
+# # >> 主题配置 ---------------------------------------------------------------------
