@@ -239,11 +239,18 @@ social:
   - icon: fas fa-qq
     url:
 
+# 百度统计key
+baidu_analytics_key: xxxxxxxx
+# leancloud统计
+leancloud:
+  app_id: BXbRzdRWKuKAzooJu0Gin1mO-gzGzoHsz
+  app_key: WEzG2CMtkcbmqrmqMkgIGIRL
+
 # valine 
 valine:
   enable: true # 如果你想用Valine评论系统，请设置enable为true
-  appId: BXbRzdRWKuKAzooJu0Gin1mO-gzGzoHsz
-  appKey: WEzG2CMtkcbmqrmqMkgIGIRL
+  app_id: BXbRzdRWKuKAzooJu0Gin1mO-gzGzoHsz
+  app_key: WEzG2CMtkcbmqrmqMkgIGIRL
   guest_info: nick,mail,link #valine comment header info
   placeholder: 你不想说些什么麽~ # valine comment input placeholder(like: Please leave your footprints )
   avatar: monsterid # gravatar style https://valine.js.org/avatar
@@ -252,10 +259,4 @@ valine:
   notify: false # valine mail notify (true/false)
   lang: zh-cn
 
-# 百度统计key
-baidu_analytics_key: xxxxxxxx
-# leancloud统计
-leancloud:
-  app_id: BXbRzdRWKuKAzooJu0Gin1mO-gzGzoHsz
-  app_key: WEzG2CMtkcbmqrmqMkgIGIRL
 # # >> 主题配置 ---------------------------------------------------------------------
