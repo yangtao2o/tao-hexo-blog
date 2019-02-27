@@ -4,13 +4,13 @@ date: 2019-02-25 16:12:34
 tags: JavaScript
 categories: JavaScript
 ---
-
 ### 基本类型和引用类型的值
+<!--more-->
 
 `ECMAScript`变量一般有两种数据类型的值：**基本类型和引用类型**。
 * 基本类型： 简单的数据段：`Undefined, Null, Boolean, Number, String`
 * 引用类型：多个值构成的对象；
-<!--more-->
+
 #### 1. 动态的属性
 
 定义两者的值：创建一个变量并为其变量赋值；
