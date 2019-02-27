@@ -6,8 +6,7 @@
 title: yangtao's blog
 subtitle: 简单、极致、不失风趣
 description: 一枚小小的前端攻城狮、迷恋摄影
-favicon: /img/favicon-y.ico
-shortcut_icon: /img/favicon-y.ico
+favicon: /img/favicon.ico
 keywords: 大涛子 前端 web 摄影
 author: 大涛子
 language: zh-CN
@@ -174,6 +173,8 @@ nav_menu:
 
 # 显示友链
 links:
+- name: Lambda Academy
+  url: https://lambda.academy/
 - name: 大雷子
   url: https://isliulei.com/
 - name: 贵姥姥
