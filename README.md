@@ -1,5 +1,5 @@
 # Material X
-一个简约卡片式的Hexo博客主题
+一个简约卡片式的Hexo博客主题，比如我的[博客](https://istaotao.com/)，比如作者的[博客](https://xaoxuu.com/blog/)
 
 # Example
 
