@@ -2,10 +2,9 @@
 title: Hexo常用命令集合 
 date: 2018-07-06 14:59:59
 tags:
-- Hexo 
-- Theme
-categories:
 - Hexo
+categories:
+- 博客
 
 ---
 

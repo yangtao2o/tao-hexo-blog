@@ -4,7 +4,7 @@ date: 2018-04-08 22:03:05
 tags:
 - Hexo
 categories:
-- Hexo
+- 博客
 ---
 
 ### [Hexo 官方文档](https://hexo.io/zh-cn/docs/)

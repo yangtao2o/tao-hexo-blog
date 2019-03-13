@@ -2,9 +2,9 @@
 title: 使用Node.js+Express+MongoDB 建站实例
 date: 2019-02-17 00:36:20
 tags:
-- node
+- Nodejs
 categories:
-- node
+- Nodejs
 ---
 ## 实例目录
 * [网站初始化，实现 GET 和 POST 的 Ajax 请求](https://github.com/yangtao2o/node-express-mongodb/blob/master/doc/doc-01-init.md)

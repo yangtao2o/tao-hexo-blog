@@ -2,9 +2,9 @@
 title: 通俗点理解Nodejs的非阻塞及事件驱动
 date: 2018-12-18 23:58:41
 tags:
-- node
+- Nodejs
 categories:
-- node
+- Nodejs
 ---
 
 

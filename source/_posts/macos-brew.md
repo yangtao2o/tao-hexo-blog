@@ -5,7 +5,7 @@ tags:
 - MacOS
 - Homebrew
 categories:
-- MacOS
+- 系统
 ---
 
 > LibreSSL SSL_read: SSL_ERROR_SYSCALL, errno 54

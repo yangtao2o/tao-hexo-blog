@@ -5,7 +5,7 @@ tags:
 - github 
 - 开发工具
 categories:
-- github
+- 开发工具
 ---
 
 之前有安装过github旧版，一直正常，后来更新了新版，但是`git pull`的时候如有如下报错：

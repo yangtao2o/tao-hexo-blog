@@ -2,10 +2,9 @@
 title: 关于使用Hexo主题Yilia中碰到的问题一二
 date: 2018-04-08 22:11:24
 tags: 
-- Hexo 
-- Theme
-categories:
 - Hexo
+categories:
+- 博客
 ---
 
 * 关于使用主题 [Yilia](https://github.com/litten/hexo-theme-yilia)的一些问题的集合地：[Issues](https://github.com/litten/hexo-theme-yilia/issues)

@@ -14,7 +14,7 @@ timezone:
 
 # URL
 ## If your site is put in a subdirectory, set url as 'http://yoursite.com/child' and root as '/child/'
-url: https://istaotao.com
+url: https://istaotao.com/
 root: /
 permalink: :year/:month/:day/:title/
 permalink_defaults: 
@@ -74,7 +74,7 @@ pagination_dir: page
 # Extensions
 ## Plugins: https://hexo.io/plugins/
 ## Themes: https://hexo.io/themes/
-theme: material-x
+theme: hexo-theme-material-x
 
 # Deployment
 ## Docs: https://hexo.io/docs/deployment.html
@@ -124,80 +124,103 @@ jsonContent:
     tags: true
 
 # >> 主题配置 ---------------------------------------------------------------------
-# 支持google字体 在这里选好你需要的字体：https://fonts.google.com，然后在_defines.less中修改font_family。
 google_fonts: 'Skranji|Ubuntu' # 多个字体中间用英文竖线隔开
 
-# 博主信息的写法示例
-avatar: /img/me-lg.jpg
-motto: 就像风走了八千里，不问归期
+# 博主信息
+widgets:
+  - widget: author
+    avatar: /img/me-lg.jpg
+    title: 大涛子
+    jinrishici: true
+    social: true
 
+# 纯文本小部件
+  - widget: plain
+    enable: true
+    icon: fas fa-bullhorn
+    title: 注意啦～
+    body: '本站使用 [Material X](https://xaoxuu.com/wiki/material-x/) 作为主题，喜欢这个主题的朋友可以阅读文档进行安装哦，超喜欢的话还可以安利给身边的朋友哦～'
+    more:
+      icon: fas fa-question-circle
+      url: https://xaoxuu.com/wiki/material-x/
+
+# 列表小部件
+  # - widget: list
+  #   icon: fas fa-medal
+  #   title: 精选项目
+  #   more:
+  #     icon: fas fa-arrow-right
+  #     url: https://xaoxuu.com/projects/
+  #   rows:
+  #     - name: AXKit
+  #       desc: iOS开源库
+  #       icon: fas fa-cube
+  #       url: https://xaoxuu.com/wiki/axkit/
+  #     - name: NoticeBoard
+  #       desc: iOS开源库
+  #       icon: fas fa-cube
+  #       url: https://xaoxuu.com/wiki/noticeboard/
+  #     - name: HeartMate
+  #       desc: iOS应用程序
+  #       icon: fas fa-heartbeat
+  #       url: https://xaoxuu.com/heartmate/
+  #     - name: Material X
+  #       desc: Hexo博客主题
+  #       icon: fas fa-cube
+  #       url: https://xaoxuu.com/wiki/material-x/
+
+# 文章分类小部件
+  - widget: category
+
+# 标签云小部件
+  - widget: tagcloud
+
+# 音乐小部件
+  - widget: music
+    icon: fas fa-compact-disc
+    title: "最近在听"
+    more:
+      icon: far fa-heart
+      url: https://music.163.com/#/user/home?id=63035382
+    server: netease   # netease（网易云音乐）tencent（QQ音乐） xiami（虾米） kugou（酷狗）
+    type: playlist    # song （单曲） album （专辑） playlist （歌单） search （搜索）
+    id: 746319661     # 歌曲/专辑/歌单 ID
+
+# TOC目录小部件
+  - widget: toc
+
+# 页脚文字
+# footer: '这是页脚文字，支持**markdown**语法。'
 
 # 导航栏，url必须以 "/" 结尾
-nav_menu:
+menu:
   - name: 主页
-    slug: about
-    icon: fas fa-home
-    url: /
-  - name: 项目
-    slug: projects
-    icon: fas fa-cube
-    url: https://codepen.io/istaotao/
-  - name: 博客
     slug: home
+    icon: fas fa-home
+    url: https://istaotao.com/home/
+  - name: 博客
+    slug: blogs
     icon: fas fa-rss
     url: /
   - name: 归档
     slug: archives
     icon: fas fa-archive
     url: /archives/
-  - name: 收藏夹
-    slug: favorite
-    icon: fas fa-address-book
-    url: http://collect.w3ctrain.com/
-  - name: 工具
-    slug: tool
-    icon: fas fa-wrench
-    url: https://tool.lu/c/developer/
-  - name: 分享
-    slug: juejin
-    icon: fas fa-share-alt-square 
-    url: https://juejin.im/user/58b67dd58fd9c50061238e38/shares/
+  - name: 分类
+    slug: categories
+    icon: fas fa-folder-open
+    url: /categories
+  - name: 标签
+    slug: tags
+    icon: fas fa-hashtag
+    url: /tags
+  - name: friends
+    icon: fas fa-users
+    url: friends/
   - name: 摄影
     slug: photo
     icon: fas fa-camera-retro
-    url: https://tuchong.com/2763959/
-  - name: 简书
-    slug: book
-    icon: fas fa-book
-    url: https://www.jianshu.com/u/c6b5715f3016/
-
-# 显示友链
-links:
-- name: Lambda Academy
-  url: https://lambda.academy/
-- name: 大雷子
-  url: https://isliulei.com/
-- name: 贵姥姥
-  url: https://zguii.com/
-- name: 一者乎
-  url: https://www.qdfuns.com/u/32286.html
-- name: xaoxuu
-  url: https://xaoxuu.com
-- name: HcySunYang
-  url: http://hcysun.me/
-- name: 张鑫旭
-  url: http://www.zhangxinxu.com/
-- name: 廖雪峰的官方网站
-  url: https://www.liaoxuefeng.com/
-- name: 阮一峰的网络日志
-  url: http://www.ruanyifeng.com/blog/
-- name: Cherry’s blog
-  url: https://cherryblog.site/
-- name: 草依山的Javascript世界
-  url: http://jser.me/about.html
-- name: 冴羽的掘金
-  url: https://juejin.im/user/58e4b9b261ff4b006b3227f4/posts
-
+    url: http://dataoboy.lofter.com/
 
 # 页脚社交信息
 social:

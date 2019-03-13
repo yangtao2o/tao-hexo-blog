@@ -4,7 +4,7 @@ date: 2019-02-04 11:23:17
 tags:
 - vue-router
 categories:
-- vue
+- 前端框架
 ---
 
 ### 前端路由与 vue-router

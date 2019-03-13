@@ -5,7 +5,7 @@ tags:
 - 报错
 - Angular
 categories:
-- Angular
+- 前端框架
 ---
 
 安装 Angular 的时候，启动 `ng serve --open`，报错如下：

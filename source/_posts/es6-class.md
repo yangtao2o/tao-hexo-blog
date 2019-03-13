@@ -4,7 +4,7 @@ date: 2019-02-24 23:36:51
 tags: 
 - es6
 categories:
-- es6
+- JavaScript
 ---
 
 ### Class - 语法糖

@@ -4,7 +4,7 @@ date: 2019-02-20 19:51:25
 tags:
 - http 
 categories:
-- http
+- 网络知识
 ---
 ### 1.请求(客户端->服务端[request]) 
 <!--more-->

@@ -5,8 +5,8 @@ tags:
 - MacOS
 - 终端
 categories:
-- MacOS
----
+- 系统
+
 
 
 #### 一、目录基本操作

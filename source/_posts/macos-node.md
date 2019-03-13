@@ -5,7 +5,7 @@ tags:
 - MacOS
 - Node
 categories:
-- MacOS
+- 系统
 ---
 
 > 前记：安装node的时候安装了最新版本，但是我需要指定某一个版本，所以安装了n模块，来进行版本切换，但是途中发生了报错：Segmentation fault：11，导致npm命令无法使用，由于使用的macOS，大家都推荐HomeBrew，于是连滚带爬地从一个坑跳到另一个坑，好疼啊...

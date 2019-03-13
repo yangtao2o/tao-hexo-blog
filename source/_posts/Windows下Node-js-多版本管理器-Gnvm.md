@@ -2,10 +2,10 @@
 title: Windows下Node.js 多版本管理器-Gnvm
 date: 2018-12-21 21:40:59
 tags:
-- node
+- Nodejs
 - gnvm
 categories:
-- node
+- Nodejs
 ---
 
 我们在平时的项目开发中，经常需要指定 Node 的版本，所有版本控制管理，就很有必要，需要哪个切哪个。
