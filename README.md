@@ -1,5 +1,7 @@
 # Material X
-一个简约卡片式的Hexo博客主题，比如我的[博客](https://istaotao.com/)，比如作者的[博客](https://xaoxuu.com/blog/)
+一个简约卡片式的Hexo博客主题，比如我的是暗黑风格： [大涛子峡谷](https://istaotao.com/)
+  
+暗黑主题：[my-material-x](https://github.com/yangtao2o/my-material-x)
 
 # Example
 
