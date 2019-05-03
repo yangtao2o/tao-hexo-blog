@@ -7,8 +7,8 @@ title: yangtao's blog
 subtitle: 简单、极致、不失风趣
 description: 一枚小小的前端攻城狮、迷恋摄影
 favicon: /img/favicon.ico
-keywords: 大涛子 前端 web 摄影
-author: 大涛子
+keywords: 大涛子 前端 web 摄影 yangtao 杨涛 JavaScript HTML css
+author: 杨涛
 language: zh-CN
 timezone:
 
@@ -74,7 +74,7 @@ pagination_dir: page
 # Extensions
 ## Plugins: https://hexo.io/plugins/
 ## Themes: https://hexo.io/themes/
-theme: hexo-theme-material-x
+theme: my-material-x
 
 # Deployment
 ## Docs: https://hexo.io/docs/deployment.html
@@ -126,161 +126,11 @@ jsonContent:
 # >> 主题配置 ---------------------------------------------------------------------
 google_fonts: 'Skranji|Ubuntu' # 多个字体中间用英文竖线隔开
 
-# 博主信息
-widgets:
-  - widget: author
-    avatar: /img/me-lg.jpg
-    title: 大涛子
-    jinrishici: true
-    social: true
-
-# 纯文本小部件
-  - widget: plain
-    enable: true
-    icon: fas fa-bullhorn
-    title: 注意啦～
-    body: '本站使用 [Material X](https://xaoxuu.com/wiki/material-x/) 作为主题，喜欢这个主题的朋友可以阅读文档进行安装哦，超喜欢的话还可以安利给身边的朋友哦～'
-    more:
-      icon: fas fa-question-circle
-      url: https://xaoxuu.com/wiki/material-x/
-
-# 列表小部件
-  # - widget: list
-  #   icon: fas fa-medal
-  #   title: 精选项目
-  #   more:
-  #     icon: fas fa-arrow-right
-  #     url: https://xaoxuu.com/projects/
-  #   rows:
-  #     - name: AXKit
-  #       desc: iOS开源库
-  #       icon: fas fa-cube
-  #       url: https://xaoxuu.com/wiki/axkit/
-  #     - name: NoticeBoard
-  #       desc: iOS开源库
-  #       icon: fas fa-cube
-  #       url: https://xaoxuu.com/wiki/noticeboard/
-  #     - name: HeartMate
-  #       desc: iOS应用程序
-  #       icon: fas fa-heartbeat
-  #       url: https://xaoxuu.com/heartmate/
-  #     - name: Material X
-  #       desc: Hexo博客主题
-  #       icon: fas fa-cube
-  #       url: https://xaoxuu.com/wiki/material-x/
-
-# 文章分类小部件
-  - widget: category
-
-# 标签云小部件
-  - widget: tagcloud
-
-# 音乐小部件
-  - widget: music
-    icon: fas fa-compact-disc
-    title: "最近在听"
-    more:
-      icon: far fa-heart
-      url: https://music.163.com/#/user/home?id=63035382
-    server: netease   # netease（网易云音乐）tencent（QQ音乐） xiami（虾米） kugou（酷狗）
-    type: playlist    # song （单曲） album （专辑） playlist （歌单） search （搜索）
-    id: 746319661     # 歌曲/专辑/歌单 ID
-
-# TOC目录小部件
-  - widget: toc
-
-# 页脚文字
-# footer: '这是页脚文字，支持**markdown**语法。'
-
-# 导航栏，url必须以 "/" 结尾
-menu:
-  - name: 主页
-    slug: home
-    icon: fas fa-home
-    url: https://istaotao.com/home/
-  - name: 博客
-    slug: blogs
-    icon: fas fa-rss
-    url: /
-  - name: 归档
-    slug: archives
-    icon: fas fa-archive
-    url: /archives/
-  - name: 分类
-    slug: categories
-    icon: fas fa-folder-open
-    url: /categories
-  - name: 标签
-    slug: tags
-    icon: fas fa-hashtag
-    url: /tags
-  - name: friends
-    icon: fas fa-users
-    url: friends/
-  - name: 摄影
-    slug: photo
-    icon: fas fa-camera-retro
-    url: http://dataoboy.lofter.com/
-
-# 页脚社交信息
-social:
-  - icon: fab fa-weixin
-    url: /img/wx.png
-  - icon: fas fa-envelope
-    url: mailto:yangtaobanner@foxmail.com
-  - icon: fab fa-github
-    url: https://github.com/yangtao2o
-  - icon: fas fa-instagram
-    url:
-  - icon: fas fa-google-plus
-    url:
-  - icon: fas fa-twitter
-    url:
-  - icon: fas fa-music
-    url: https://music.163.com/#/user/home?id=282751852
-  - icon: fas fa-rss
-    url: 
-  - icon: fas fa-telegram
-    url:
-  - icon: fas fa-vimeo
-    url:
-  - icon: fas fa-gitlab
-    url:
-  - icon: fab fa-linkedin
-    url: http://www.linkedin.com/in/%E6%B6%9B-%E6%9D%A8-06a70212b/
-  - icon: fas fa-snapchat
-    url:
-  - icon: fas fa-steam
-    url:
-  - icon: fas fa-spotify
-    url:
-  - icon: fas fa-tumblr
-    url:
-  - icon: fas fa-youtube
-    url:
-  - icon: fab fa-weibo
-    url: http://weibo.com/taoboy0208
-  - icon: fas fa-qq
-    url:
-
 # 百度统计key
 baidu_analytics_key: xxxxxxxx
 # leancloud统计
 leancloud:
   app_id: BXbRzdRWKuKAzooJu0Gin1mO-gzGzoHsz
   app_key: WEzG2CMtkcbmqrmqMkgIGIRL
-
-# valine 
-valine:
-  enable: true # 如果你想用Valine评论系统，请设置enable为true
-  app_id: BXbRzdRWKuKAzooJu0Gin1mO-gzGzoHsz
-  app_key: WEzG2CMtkcbmqrmqMkgIGIRL
-  guest_info: nick,mail,link #valine comment header info
-  placeholder: 你不想说些什么麽~ # valine comment input placeholder(like: Please leave your footprints )
-  avatar: monsterid # gravatar style https://valine.js.org/avatar
-  pageSize: 10 # comment list page size
-  verify: false # valine verify code (true/false)
-  notify: false # valine mail notify (true/false)
-  lang: zh-cn
 
 # # >> 主题配置 ---------------------------------------------------------------------

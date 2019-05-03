@@ -1,6 +1,11 @@
 ---
 layout: links     # 必须
-title: 我的朋友们   # 可选，这是友链页的标题
+title: 天涯若比邻 | 胡天侃地   # 可选，这是友链页的标题
+music:
+  enable: true      # true（文章内和文章列表都显示） internal（只在文章内显示）
+  server: netease   # netease（网易云音乐）tencent（QQ音乐） xiami（虾米） kugou（酷狗）
+  type: song        # song （单曲） album （专辑） playlist （歌单） search （搜索）
+  id: 26664345      # 歌曲/专辑/歌单 ID
 links:
   - group: 我的朋友
     icon: fas fa-user-tie
@@ -33,26 +38,26 @@ links:
     - name: 草依山的Javascript世界
       avatar: http://jser.me/images/logo.png
       url: http://jser.me/about.html
-      backgroundColor: '#555' 
+      backgroundColor: '#78720d' 
       textColor: '#fff'
       tags: 
       - 不仅仅是JS
     - name: HcySunYang
       avatar: http://hcysun.me/img/hcysun.jpg
       url: http://hcysun.me/
-      backgroundColor: '#037094' 
+      backgroundColor: '#1abc9c' 
       textColor: '#fff'
       tags: 
       - Vue
       - Node
-    - name: Lambda Academy
-      avatar: https://cn.leihuang.dev/static/profile-pic-9acec7d2e5585641d335ea419f4b6090.jpg
-      url: https://lambda.academy/
+    - name: 大東博客
+      avatar: https://cdn.jsdelivr.net/gh/AiMe1991/assets-blog/avatar/avatar-128.png
+      url: https://www.sxd08.com
       backgroundColor: '#116480' 
       textColor: '#fff'
       tags: 
-      - 函数式编程
-      - 前端开发
+      - Web前端
+
 ---
 
 各位大佬想交换友链的话可以在下方留言，必须要有名称、头像链接、和至少一个标签哦～
