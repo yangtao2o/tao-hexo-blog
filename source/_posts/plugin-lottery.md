@@ -1,13 +1,16 @@
 ---
 title: 九宫格抽奖
 date: 2018-11-27 23:11:54
-tags: 
-- jQuery
+tags:
+  - jQuery
 categories:
-- 工具库
+  - 工具库
 ---
+
 九宫格抽奖记录：
+
 <!--more-->
+
 ```JavaScript
   // 九宫格抽奖
   var click=false;
@@ -64,7 +67,7 @@ categories:
       luck.prize=-1;
       luck.times=0;
       click=false;
-      
+
       switch(which) {
         case 0:
           prize = '小米鼠标';
@@ -108,7 +111,7 @@ categories:
       // 展示中奖状态
       setTimeout(function() {
         modalShow(title,content,desc);
-      }, 800);  
+      }, 800);
     } else {
       if (luck.times<luck.cycle) {
         luck.speed -= 10;
@@ -126,7 +129,7 @@ categories:
       if (luck.speed<40) {
         luck.speed=40;
       }
-      
+
       luck.timer = setTimeout(function() {
         roll(which);
       },luck.speed);
@@ -151,7 +154,7 @@ categories:
           if(data.code == 1) {
             var which = data.type;
             // 调取抽奖并传值
-            roll(which);  
+            roll(which);
           } else {
             if(data.msg == '请先登录！') {
               loginFunc('course_gift');
