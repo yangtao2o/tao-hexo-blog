@@ -79,9 +79,10 @@ theme: my-material-x
 # Deployment
 ## Docs: https://hexo.io/docs/deployment.html
 # git@github.com:yangtao2o/yangtao2o.github.io.git
+# root@47.101.33.81:/var/repo/hexo.git
 deploy:
   type: git
-  repo: git@github.com:yangtao2o/yangtao2o.github.io.git
+  repo: root@47.101.33.81:/var/repo/hexo.git
   branch: master
   
 # Highlight Plugin
