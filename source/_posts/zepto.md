@@ -211,7 +211,7 @@ var Zepto = (function() {
 
   zepto.Z = function(dom, selector) {
     dom = dom || [];
-    dom.__proto__ = $.fn;   // 关键位置
+    dom.__proto__ = $.fn; // 关键位置
     dom.selector = selector || "";
     return dom;
   };
@@ -298,7 +298,17 @@ window.$ === undefined && (window.$ = Zepto);
 ### 最新版（v1.2.0）模拟
 
 ```js
-(function(window) {
+// 自执行匿名函数(IIFE，立即调用函数表达式)
+(function(global, factory) {
+  // amd 规范
+  if (typeof define === "function" && define.amd) {
+    define(function() {
+      return factory(global);
+    });
+  } else {
+    factory(global);
+  }
+})(this, function(window) {
   var Zepto = (function() {
     var $;
     var zepto = {};
@@ -333,11 +343,16 @@ window.$ === undefined && (window.$ = Zepto);
 
     // 方法属性
     $.fn = {
-      constructor: zepto.Z,  // 手动绑定 constructor 属性
+      constructor: zepto.Z, // 手动绑定 constructor 属性
       length: 0,
       push: "push method",
       css: function() {
         console.log("css");
+        return this;  // 返回 this，可以链式调用
+      },
+      html: function() {
+        console.log("html")
+        return this;
       }
     };
     $.fn.on = function(event, data, callback) {
@@ -363,10 +378,24 @@ window.$ === undefined && (window.$ = Zepto);
 
   window.Zepto = Zepto;
   window.$ === undefined && (window.$ = Zepto);
-})(window);
+});
+```
+
+amd 规范：
+
+```js
+(function(global, factory) {
+  if (typeof define === "function" && define.amd) {
+    define(function() {
+      return factory(global);
+    });
+  } else {
+    factory(global);
+  }
+})(this, function(window) {})
 ```
 
 ### 学习资料
 
-- [zepto设计和源码分析](https://www.imooc.com/learn/745) - 视频
+- [zepto 设计和源码分析](https://www.imooc.com/learn/745) - 视频
 - [zepto 对象思想与源码分析](http://www.kancloud.cn/wangfupeng/zepto-design-srouce/173680)
