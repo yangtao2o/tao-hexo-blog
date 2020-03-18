@@ -1,11 +1,10 @@
 ---
-title: 欢迎来到「召唤师峡谷」
-date: 2018-04-06 13:45:24
+title: Hi，很高兴见到你~
+date: 2048-10-24 13:14:15
 tags: false
 categories: false
 toc: false
 recommended_posts: false
 ---
 
-### 戳开可以说点什么哈 ...
-
+欢迎[在此](/2048/10/24/hello-world/)留言，或者去[友链](/friends/)看看大家 ~

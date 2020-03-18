@@ -1,5 +1,5 @@
 ---
-title: Zepto-core-1.1.6 源码注释
+title: Zepto-core-1.1.6 源码注释【转载】
 date: 2020-03-13 14:05:37
 tags:
 	- zepto
