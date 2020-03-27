@@ -88,11 +88,11 @@ server.listen(8000);
 
 前端利用 `http-server -p 8001 .`，开启一个服务，然后 Node 也开启一个端口为 8000 的服务，运行：
 
-```js
+```text
 My name is Yang Min, and 8 years old.
 ```
 
-可以看到，一个 JSONP 的步骤实质是：
+### 一个 JSONP 的步骤实质
 
 客户端发送 script 请求，参数中带着处理返回数据的回调函数的名字 (通常是 callback)，如请求 script 的 url 是：
 
@@ -111,6 +111,75 @@ getMsg("{name: 'Yang Min', age: '8'}");
 很明显，由于 JSONP 技术本质上利用了 script 脚本请求，所以只能实现 GET 跨域请求，这也是 JSONP 跨域的最大限制。
 
 由于 server 产生的响应为 json 数据的包装（故称之为 jsonp，即 json padding），形如：`getMsg("{name: 'Yang Min', age: '8'}")`
+
+## JSONP 封装
+
+客户端：
+
+```js
+const jsonp = ({ url, params, callbackName }) => {
+  const generateURL = () => {
+    let dataStr = "";
+    for (let key in params) {
+      dataStr += `${key}=${params[key]}&`;
+    }
+    dataStr += `callback=${callbackName}`;
+    return `${url}?${dataStr}`;
+  };
+  return new Promise((resolve, reject) => {
+    // 初始化回调函数名称
+    callbackName =
+      callbackName ||
+      "cb" +
+        Math.random()
+          .toString()
+          .replace(".", "");
+    let scriptEle = document.createElement("script");
+    scriptEle.src = generateURL();
+    document.body.appendChild(scriptEle);
+
+    // 绑定到 window 上，为了后面调用
+    window[callbackName] = data => {
+      resolve(data);
+      // script 执行完了，成为无用元素，需要清除
+      document.body.removeChild(scriptEle);
+    };
+  });
+};
+
+jsonp({
+  url: "http://127.0.0.1:8000/",
+  params: {
+    name: "Yang Min",
+    age: "8"
+  },
+  callbackName: "getData"
+})
+  .then(data => JSON.parse(data))
+  .then(data => {
+    console.log(data); // {name: "Yang Min", age: "8"}
+  });
+```
+
+Node 端：
+
+```js
+const http = require("http");
+const querystring = require("querystring");
+
+const server = http.createServer((req, res) => {
+  const url = req.url;
+  const query = querystring.parse(url.split("?")[1]);
+  const { name, age, callback } = query;
+  const data = {
+    name,
+    age
+  }
+  res.end(`${callback}('${JSON.stringify(data)}')`);
+});
+
+server.listen(8000);
+```
 
 ## jQuery 中的 JSONP
 
@@ -170,4 +239,5 @@ function getAjaxData() {
 
 ## 参考资料
 
+- [什么是跨域？浏览器如何拦截响应？如何解决](https://juejin.im/post/5e76bd516fb9a07cce750746#heading-67)
 - [jsonp 跨域原理分析](https://segmentfault.com/a/1190000009773724) - 分析了 Ajax 和 jsonp 之间的关系
