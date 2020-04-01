@@ -74,8 +74,11 @@ function Constructor() {}
 o = new Constructor();
 // 上面的一句就相当于:
 o = Object.create(Constructor.prototype);
-// 所以:
-console.log(o.__proto__ === Constructor.prototype); // true
+// 相当于
+Object.setPrototypeOf(o, Constructor.prototype);
+// 再相当于
+o.__proto__ === Constructor.prototype);
+// 哇哦，完美
 
 o = Object.create(Object.prototype, {
   // foo会成为所创建对象的数据属性
@@ -143,9 +146,12 @@ Object.setPrototypeOf =
 function Car() {}
 var mycar = new Car();
 
+// 注意下面 instanceof 和 isPrototypeOf() 之间的区别：
+// instanceof 中的 mycar 原型链是针对 Car.prototype，而不是 Car 本身
 var a = mycar instanceof Car; // 返回 true
 var b = mycar instanceof Object; // 返回 true
 
+// isPrototypeOf() 也是 Car.prototype，不过是显式的，注意这点小小区别
 var aa = Car.prototype.isPrototypeOf(mycar); // true
 var bb = Object.prototype.isPrototypeOf(mycar); // true
 ```
@@ -237,7 +243,6 @@ function prototype(child, parent) {
   F.prototype = parent.prototype;
   child.prototype = new F();
   child.prototype.constructor = child;
-  child.super = parent.prototype;
 }
 ```
 
@@ -251,21 +256,17 @@ function create(o) {
 }
 
 function prototype(child, parent) {
-  const prototype = create(parent.prototype);
-  child.prototype = prototype;
+  child.prototype = create(parent.prototype);
   child.prototype.constructor = child;
-  child.super = parent.prototype;
 }
 ```
 
 第三版：
 
 ```js
-function myExtend(child, parent) {
-  const prototype = Object.create(parent.prototype);
-  child.prototype = prototype;
+function prototype(child, parent) {
+  child.prototype = Object.create(parent.prototype);
   child.prototype.constructor = child;
-  child.super = parent.prototype;
 }
 ```
 
@@ -277,8 +278,7 @@ function myExtend(child, parent) {
 
 **寄生组合式继承**：只调用了一次 Parent 构造函数，并且因此避免了在 Parent.prototype 上面创建不必要的、多余的属性。
 
-PS：其他几种继承方式见这里[JavaScript 深入之继承的多种方式和优缺点
-](https://github.com/mqyqingfeng/Blog/issues/16)。
+PS：其他几种继承方式见这里[JavaScript 深入之继承的多种方式和优缺点](https://github.com/mqyqingfeng/Blog/issues/16)。
 
 引用《JavaScript 高级程序设计》中对**寄生组合式继承**的夸赞就是：
 
@@ -315,8 +315,7 @@ const me = new Child({ name: "Yang", age: 28 });
 
 ```js
 function _extends(child, parent) {
-  const prototype = Object.create(parent.prototype);
-  child.prototype = prototype;
+  child.prototype = Object.create(parent.prototype);;
   child.prototype.constructor = child;
 }
 
@@ -362,7 +361,10 @@ var Child = (function(_Parent) {
 const myself = new Child({ name: "YyY", age: 18 });
 ```
 
-**PS**：使用 Babel 编译器编译如上代码，完整版在[这里](https://babel.docschina.org/repl#?babili=false&browsers=&build=&builtIns=false&spec=false&loose=false&code_lz=MYGwhgzhAEAKYCcCmA7ALtA3gKGtYA9ihGggK7BoEIAUBADmgJRa57RoAWAlhAHQowAWyTQAvNAZoBwpAG42AXzYBzJGgBysmixztoyNGQQoOPfoJEK8y5dlCQYAYR4gAJtCQAPNKjcx4ZHRWPEJiUgoqWildNjwIMnokaMYma3YuXj4wNXFJRmy1dOU8NTQAQTUdEPZDY1NM_hzRAGpoACJoAE8kRBgCdz524oU7MJJoETyUJAB3aBdudxpMaEskAC4OgE0wFBV2gBpoZq2AJgAOaEU0oA&debug=false&forceAllTransforms=false&shippedProposals=false&circleciRepo=&evaluate=false&fileSize=false&timeTravel=false&sourceType=module&lineWrap=true&presets=es2015%2Ces2016%2Ces2017%2Cstage-0%2Cstage-1%2Cstage-2%2Cstage-3%2Ces2015-loose&prettier=true&targets=&version=6.26.0&envVersion=)。
+附加两篇文章：
+
+- [ES6 系列之 Babel 是如何编译 Class 的(上)](https://github.com/mqyqingfeng/Blog/issues/105)
+- [ES6 系列之 Babel 是如何编译 Class 的(下)](https://github.com/mqyqingfeng/Blog/issues/106)
 
 ## Array.isArray 实现
 
@@ -382,11 +384,12 @@ console.log(Array.myIsArray([])); // true
 此外鉴于 `typeof` 的结果是小写，我也希望所有的结果都是小写。
 
 ```js
-var class2type = {}; // 如：[object Array]: "array"
+var class2type = {};
 
 "Boolean Number String Function Array Date RegExp Object Error Null Undefined Symbol Set Map BigInt"
   .split(" ")
   .map(function(item) {
+    // 格式如："[object Array]": "array"
     class2type["[object " + item + "]"] = item.toLowerCase();
   });
 
@@ -411,6 +414,7 @@ var isArray =
 ```
 
 参考资料：[JavaScript 专题之类型判断(上)](https://github.com/mqyqingfeng/Blog/issues/28)
+
 
 ## 参考资料
 
