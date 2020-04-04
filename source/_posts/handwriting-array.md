@@ -12,6 +12,52 @@ categories:
 
 <!--more-->
 
+## map, filter, reduce 各自有什么作用
+
+**map** 的作用是生成一个新数组，遍历原数组，将每个元素拿出来做一些变换然后放入到新的数组中。
+
+```js
+[1, 2, 3].map(v => v + 1) // -> [2, 3, 4]
+```
+
+另外 map 的回调函数接受三个参数，分别是**当前索引元素，索引，原数组**
+
+```js
+['1','2','3'].map(parseInt)
+```
+
+- 第一轮遍历 `parseInt('1', 0) -> 1`
+- 第二轮遍历 `parseInt('2', 1) -> NaN`
+- 第三轮遍历 `parseInt('3', 2) -> NaN`
+
+**filter** 的作用也是生成一个新数组，在遍历数组的时候将返回值为 true 的元素放入新数组，我们可以利用这个函数删除一些不需要的元素
+
+```js
+let array = [1, 2, 4, 6]
+let newArray = array.filter(item => item !== 6)
+console.log(newArray) // [1, 2, 4]
+```
+
+和 map 一样，filter 的回调函数也接受三个参数，用处也相同。
+
+**reduce** 可以将数组中的元素通过回调函数最终转换为一个值。
+
+对于 reduce 来说，它接受两个参数，分别是回调函数和初始值。
+
+**回调函数**接受四个参数，分别为**累计值、当前元素、当前索引、原数组**。
+
+接下来我们就通过 reduce 来实现 map 函数：
+
+```js
+const arr = [1, 2, 3]
+const mapArray = arr.map(value => value * 2)
+const reduceArray = arr.reduce((acc, current) => {
+  acc.push(current * 2)
+  return acc
+}, [])
+console.log(mapArray, reduceArray) // [2, 4, 6]
+```
+
 ## Array.isArray 实现
 
 可以通过 **toString()** 来获取每个对象的类型。为了每个对象都能通过 `Object.prototype.toString()` 来检测，需要以 `Function.prototype.call()` 或者 `Function.prototype.apply()` 的形式来调用，传递要检查的对象作为第一个参数。

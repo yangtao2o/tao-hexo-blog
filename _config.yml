@@ -105,31 +105,6 @@ prism_plugin:
   line_number: 'default'    # default false
   custom_css: 'optional'     # optional
 
-# hexo-generator-json-content
-jsonContent:
-  meta: false
-  pages: false
-  posts:
-    title: true
-    date: true
-    path: true
-    text: false
-    raw: false
-    content: false
-    slug: false
-    updated: false
-    comments: false
-    link: false
-    permalink: false
-    excerpt: false
-    categories: true
-    tags: true
-
-search:
-  path: search.xml
-  field: post
-  format: html
-  limit: 10000
 # >> 主题配置 ---------------------------------------------------------------------
 google_fonts: 'Skranji|Ubuntu' # 多个字体中间用英文竖线隔开
 
