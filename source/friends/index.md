@@ -12,7 +12,7 @@ links:
     items:
       - name: 大涛子客栈 # 博客名
         avatar: https://ae01.alicdn.com/kf/H77cd89dcc6ad420297a555d36891af53B.jpg # 头像链接
-        url: http://yangtao.site/vuepress # 博客链接
+        url: https://www.yangtao.site/vuepress # 博客链接
         backgroundColor: "#be2b2b" # 卡片背景颜色
         textColor: "#fff" # 卡片文字颜色
         tags: # 标签
@@ -97,7 +97,7 @@ links:
 
 > 名称： 大涛子峡谷
 > 头像： https://ae01.alicdn.com/kf/H77cd89dcc6ad420297a555d36891af53B.jpg
-> 网址： http://yangtao.site
+> 网址： https://www.yangtao.site
 > 标签： 前端开发 摄影
 
 分组和标签不合适的话可以留言或者发邮件私聊我进行更改。
