@@ -84,7 +84,7 @@ deploy:
   type: git
   repo: root@47.101.33.81:/var/repo/hexo.git
   branch: master
-  
+
 # Highlight Plugin
 prism_plugin:
   mode: 'realtime'    # realtime/preprocess
