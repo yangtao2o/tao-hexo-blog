@@ -1,6 +1,6 @@
 ---
-title: Hi，很高兴见到你~
-date: 2048-10-24 13:14:15
+title: New World, New Start
+date: 2016-04-14 13:14:15
 tags: false
 categories: false
 toc: false

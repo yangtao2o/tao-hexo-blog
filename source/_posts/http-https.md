@@ -58,6 +58,24 @@ server {
 }
 ```
 
+## 升级 HTTP2
+
+修改 nginx 配置，原本 https 的 listen 为：
+
+```sh
+listen 443 ssl;
+```
+
+现在在后面加上 http2：
+
+```sh
+listen 443 ssl http2;
+```
+
+然后，关闭 Nginx，重启。这时候去看页面，原本的 http1.1 就会变成 http2。
+
+参考资料：[怎样把网站升级到http/2](https://zhuanlan.zhihu.com/p/29609078)
+
 ## 强制 http 跳转
 
 使用 curl 命令：
