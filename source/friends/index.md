@@ -40,7 +40,7 @@ links:
     items:
       - name: xaoxuu’s blog
         avatar: https://cdn.jsdelivr.net/gh/xaoxuu/assets@master/avatar/avatar.png
-        url: https://xaoxuu.com/blog/
+        url: https://xaoxuu.com/
         backgroundColor: "#f0dda3" # 卡片背景颜色
         textColor: "#4a4a4a" # 卡片文字颜色
         tags: # 标签
@@ -52,48 +52,12 @@ links:
         textColor: "#fff"
         tags:
           - 不仅仅是JS
-      - name: HcySunYang
-        avatar: http://hcysun.me/img/hcysun.jpg
-        url: http://hcysun.me/
-        backgroundColor: "#1abc9c"
-        textColor: "#fff"
-        tags:
-          - Vue
-          - Node
-      - name: 大東博客
-        avatar: https://cdn.jsdelivr.net/gh/AiMe1991/assets-blog/avatar/avatar-128.png
-        url: https://www.sxd08.com
-        backgroundColor: "#116480"
-        textColor: "#fff"
-        tags:
-          - Web前端
-      - name: TRHX’S BLOG
-        avatar: https://cdn.jsdelivr.net/gh/TRHX/CDN-for-itrhx.com@1.1/images/trhx.png
-        url: https://www.itrhx.com
-        backgroundColor: "#801185"
-        textColor: "#fff"
-        tags:
-          - Python
-          - Java
-      - name: Clover Tuan
-        avatar: https://user-assets.sxlcdn.com/images/85180/Fn7mypaX7Xn0u_07g-lPmfhuv-R6.png
-        url: https://clovertuan.github.io/
-        backgroundColor: "#abb033"
-        textColor: "#fff"
-        tags:
-          - UX/UI
-          - Designer
-      - name: 残梦
-        avatar: https://cdn.jsdelivr.net/gh/2662419405/CDN@1.0/sh.jpg
-        url: https://sunhang.top
-        backgroundColor: "#0f9dd2"
-        textColor: "#fff"
-        tags:
-          - 前端
-          - JS
+
 ---
 
 各位走过路过的朋友想交换友链的话，可以在下方留言，要有名称、头像链接、和至少一个标签哦～
+
+之前有死链的朋友我会不定期替换，记得来说声哈~
 
 > 名称： 大涛子峡谷
 > 头像： https://ae01.alicdn.com/kf/H77cd89dcc6ad420297a555d36891af53B.jpg

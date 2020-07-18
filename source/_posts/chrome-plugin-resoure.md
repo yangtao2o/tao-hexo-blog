@@ -2,6 +2,10 @@
 title: macOS 如何查看 chrome 插件源码
 date: 2020-07-01 22:43:28
 tags:
+- MacOS
+- chrome
+categories:
+- 开发工具
 ---
 
 > 主要通过 `chrome://extensions/`、`chrome://versions`
