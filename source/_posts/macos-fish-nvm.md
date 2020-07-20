@@ -102,7 +102,26 @@ omf install bass
 brew install nvm
 ```
 
-然后进入如下目录，并创建 config.fish 文件：
+然后，安装完成会有一堆提示，如一下关键信息：
+
+```sh
+You should create NVM's working directory if it doesn't exist:
+
+  mkdir ~/.nvm
+
+Add the following to ~/.config/fish/config.fish or your desired shell
+configuration file:
+
+  export NVM_DIR="$HOME/.nvm"
+  [ -s "/usr/local/opt/nvm/nvm.sh" ] && . "/usr/local/opt/nvm/nvm.sh"  # This loads nvm
+  [ -s "/usr/local/opt/nvm/etc/bash_completion.d/nvm" ] && . "/usr/local/opt/nvm/etc/bash_completion.d/nvm"  # This loads nvm bash_completion
+
+You can set $NVM_DIR to any location, but leaving it unchanged from
+/usr/local/opt/nvm will destroy any nvm-installed Node installations
+upon upgrade/reinstall.
+```
+
+根据提示进入如下目录，并创建 config.fish 文件：
 
 ```sh
 cd ~/.config/fish/
@@ -113,7 +132,7 @@ touch config.fish
 
 ```sh
 function nvm
-    bass source ~/.nvm/nvm.sh ';' nvm $argv
+    bass source /usr/local/opt/nvm/nvm.sh ';' nvm $argv
 end
 ```
 
@@ -127,8 +146,18 @@ source ~/.config/fish/config.fish
 
 ```sh
 nvm --version
-0.34.0
+0.35.3
 ```
+
+如果你是全局安装 nvm，比如使用 curl 或者 wget，config.fish 应该是：
+
+```sh
+function nvm
+      bass source ~/.nvm/nvm.sh ';' nvm $argv
+  end
+```
+
+主要是 nvm.sh 文件的路径问题是否存在！
 
 大功告成，打完收工！
 
