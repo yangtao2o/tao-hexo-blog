@@ -17,7 +17,7 @@ timezone:
 url: https://www.yangtao.site
 root: /
 permalink: :year/:month/:day/:title/
-permalink_defaults: 
+permalink_defaults:
 
 # Directory
 source_dir: source
@@ -44,16 +44,16 @@ highlight:
   line_number: true
   auto_detect: false
   tab_replace:
-  
+
 # Home page setting
 # path: Root path for your blogs index page. (default = '')
 # per_page: Posts displayed per page. (0 = disable pagination)
 # order_by: Posts order. (Order by date descending by default)
 index_generator:
   path: ''
-  per_page: 10
+  per_page: 20
   order_by: -date
-  
+
 # Category & Tag
 default_category: uncategorized
 category_map:
@@ -87,8 +87,9 @@ deploy:
 
 # Highlight Plugin
 prism_plugin:
-  mode: 'realtime'    # realtime/preprocess
-  theme: 'base16-ateliersulphurpool.light'    # hopscotch/pojoaque/tomorrow/solarizedlight/xonokai/duotone-dark/duotone-light/
+  mode: 'realtime' # realtime/preprocess
+  theme:
+    'base16-ateliersulphurpool.light' # hopscotch/pojoaque/tomorrow/solarizedlight/xonokai/duotone-dark/duotone-light/
     # default
     # coy
     # dark
@@ -102,8 +103,8 @@ prism_plugin:
     # duotone-sea
     # duotone-space
     # ghcolors
-  line_number: 'default'    # default false
-  custom_css: 'optional'     # optional
+  line_number: 'default' # default false
+  custom_css: 'optional' # optional
 
 # >> 主题配置 ---------------------------------------------------------------------
 google_fonts: 'Skranji|Ubuntu' # 多个字体中间用英文竖线隔开
@@ -114,5 +115,4 @@ baidu_analytics_key: xxxxxxxx
 leancloud:
   app_id: BXbRzdRWKuKAzooJu0Gin1mO-gzGzoHsz
   app_key: WEzG2CMtkcbmqrmqMkgIGIRL
-
 # # >> 主题配置 ---------------------------------------------------------------------

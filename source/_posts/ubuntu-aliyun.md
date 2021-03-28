@@ -3,6 +3,9 @@ title: 将 Hexo 和 Vuepress 静态资源推送至 Ubuntu
 date: 2019-11-27 23:50:05
 tags:
   - Ubuntu
+  - Nginx
+  - Hexo
+  - Vuepress
 categories:
   - 服务端
 ---
@@ -471,7 +474,7 @@ hexo g -d
 
 有了部署 Hexo 的经验，再部署 vuepress，就简单多了。
 
-我的想法是：hexo 做首页，vuepress 做子页内容，比如：`http:yangtao.site/vuepress`。所以，建立 git hooks 就应该可以了。
+我的想法是：hexo 做首页，vuepress 做子页内容，比如：`http//:yangtao.site/vuepress`。所以，建立 git hooks 就应该可以了。
 
 ### 服务端配置
 
@@ -581,8 +584,8 @@ cd -
 
 ```js
 const config = {
-  base: "/vuepress/" // 基准 URL
-};
+  base: '/vuepress/' // 基准 URL
+}
 ```
 
 这样，访问 `http://47.101.33.81/vuepress`，就可以正常访问,这里非常关键，如果是根目录，直接去掉 vuepress，重新构建部署。

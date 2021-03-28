@@ -126,6 +126,7 @@ brew install neovim
 
 ## 参考资料
 
+- [优雅玩转 Vim](https://www.imooc.com/learn/1049) - 慕课网免费视频
 - [Linux vi/vim](https://www.runoob.com/linux/linux-vim.html) --- https://www.runoob.com/
 - [Neovim](https://github.com/neovim/neovim)
 - [MacVim](https://github.com/macvim-dev/macvim)
